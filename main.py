@@ -32,12 +32,14 @@ img2 = pygame.image.load("OW_pictures/"+(output2)+".png")
 img3 = pygame.image.load("OW_pictures/"+(output3)+".png")
 width = img1.get_width()
 height = img1.get_height()
-running = True
-while running:
+#start and stop loop
+while True:
     mouse_pos = pygame.mouse.get_pos()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            break
+#this is all the code for the generation of a new picture and covering of the old ones.
+#I'm currently working on getting this part to be more simplified.
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos = pygame.mouse.get_pos()
             if width_1 <= mouse_pos[0] <= width_1+50 and height_1 <= mouse_pos[1] <= height_1+20:
